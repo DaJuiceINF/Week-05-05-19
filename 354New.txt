@@ -1,0 +1,100 @@
+word ="phindulo"
+import string
+import random
+ 
+ 
+
+
+  
+start = 1
+end = 8
+stNum = [ 1,4,2,8,6,3,9,5]
+primez = []
+prime2 = []
+strings = []
+count = 0
+  
+really = False
+for val in stNum: 
+      
+   # If num is divisible by any number   
+   # between 2 and val, it is not prime  
+   if val > 1: 
+       for n in range(2, val): 
+           if (val % n) == 0: 
+               break
+       else: 
+           prime2.append(val)
+       
+
+
+             
+           
+length = len(prime2)
+if length == 0:
+    length = length + 1
+
+print('')
+print('0.The student number is: 14286395')
+print('')
+print('1.The number of prime numbers is: ' + str(len(prime2)) )
+print('')
+from random import randint
+rand = randint(25, 50)
+r = rand % int(length)
+
+print('2.The random number is: '+ str(rand))
+x = 0
+size2 = 5
+while x < r:
+    def string_generator(size):
+        chars = string.ascii_uppercase + string.ascii_lowercase
+        return ''.join(random.choice(chars) for _ in range(size))
+    test = string_generator(size2)
+ 
+    strings.append(test)
+    x = x + 1
+    if size2 == 5:
+        size2 = 7
+    else:
+        size2 = 5
+print('')
+print('3.The number of strings to be generated is: ' + str(len(strings)))
+y = 0
+ln = len(strings)
+print('')
+print('4. List of Strings:')
+print('*****************')
+while y < ln:
+ print(str(y) + ' - ' + strings[y])
+ y = y + 1
+
+print('')
+print('*****************')
+newArr = []
+VOWELS = ("a","e","i","o","u","A","E","I","O","U")
+count = 0
+n = 0
+while n < len(strings):
+    for letter in strings[n]:
+        if letter in VOWELS:
+            count = count + 1
+    n +=1
+    newArr.append(count)
+    count = 0
+
+            
+   
+                     
+
+b = sorted(newArr)
+c = map(sorted(newArr), strings )
+
+
+print('4. Sorted List:')
+print('*****************')
+y = 0
+while y < len(a):
+    print(str(y) + '  - ' + a[y] + ' (Vowels: ' + str(b[y]) +' )')
+    y = y + 1
+ 
